@@ -20,7 +20,6 @@
         body { top: 0px !important; position: static !important; font-family: 'Plus Jakarta Sans', sans-serif; }
         html { scroll-behavior: smooth; }
         
-        /* Google Translate Container Hiding Overlays */
         .goog-te-banner-frame, .skiptranslate, #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
         .goog-text-highlight { background-color: transparent !important; box-shadow: none !important; }
         #google_translate_element { display: none !important; }
@@ -28,12 +27,9 @@
         .hero-bg {
             background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #1d4ed8 100%);
         }
-        .gold-accent {
-            color: #facc15;
-        }
     </style>
 
-    <!-- Google Translate Script Implementation -->
+    <!-- Google Translate Script -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -49,7 +45,6 @@
                 translateSelect.value = langCode;
                 translateSelect.dispatchEvent(new Event("change"));
             } else {
-                /* Retry if Google Translate element hasn't finished loading */
                 setTimeout(function() {
                     var retrySelect = document.querySelector(".goog-te-combo");
                     if (retrySelect) {
@@ -70,13 +65,11 @@
             
             <!-- SCHOOL BRANDING & MASCOT LOGO -->
             <div class="flex items-center space-x-3">
-                <img src="https://schoolweb.tdsb.on.ca/portals/davidlewis/images/DavidLewisPS_logo.png" 
-                     onerror="this.onerror=null; this.src='https://www.tdsb.on.ca/Portals/0/Community/Mascots/Lions.png';" 
-                     alt="David Lewis P.S. Lewis Lion Mascot" 
-                     class="w-12 h-12 rounded-full border-2 border-amber-400 bg-white p-0.5 shadow-md object-contain">
+                <div class="w-12 h-12 rounded-full border-2 border-amber-400 bg-amber-400 flex items-center justify-center text-slate-950 font-black text-2xl shadow-md">
+                    <i class="fa-solid fa-shield-cat"></i>
+                </div>
                 <div>
-                    <!-- Slightly Bigger Font for David Lewis P.S. -->
-                    <h1 class="font-extrabold text-xl sm:text-2xl tracking-tight text-white font-['Lexend'] leading-tight">
+                    <h1 class="font-extrabold text-2xl sm:text-3xl tracking-tight text-white font-['Lexend'] leading-tight">
                         David Lewis Public School
                     </h1>
                     <p class="text-xs text-amber-300 font-semibold flex items-center gap-1.5">
@@ -87,21 +80,20 @@
                 </div>
             </div>
 
-            <!-- FIXED TRANSLATION BUTTONS -->
+            <!-- LANGUAGE TRANSLATION BUTTONS -->
             <div class="flex flex-wrap items-center gap-1.5 bg-slate-800 p-2 rounded-2xl border border-slate-700 text-xs">
                 <span class="font-bold text-slate-300 mr-1 flex items-center gap-1.5">
                     <i class="fa-solid fa-language text-amber-400 text-sm"></i> Translate:
                 </span>
                 <button onclick="switchLanguage('en')" class="px-2.5 py-1 font-bold rounded-xl bg-amber-400 text-slate-950 hover:bg-amber-300 transition shadow-sm">EN</button>
-                <button onclick="switchLanguage('zh-CN')" class="px-2.5 py-1 font-bold rounded-xl bg-slate-700 text-white hover:bg-slate-600 transition border border-slate-600">🇨🇳 普通话 (Mandarin)</button>
-                <button onclick="switchLanguage('zh-TW')" class="px-2.5 py-1 font-bold rounded-xl bg-slate-700 text-white hover:bg-slate-600 transition border border-slate-600">🇭🇰 粵語 (Cantonese)</button>
+                <button onclick="switchLanguage('zh-CN')" class="px-2.5 py-1 font-bold rounded-xl bg-slate-700 text-white hover:bg-slate-600 transition border border-slate-600">🇨🇳 普通话</button>
+                <button onclick="switchLanguage('zh-TW')" class="px-2.5 py-1 font-bold rounded-xl bg-slate-700 text-white hover:bg-slate-600 transition border border-slate-600">🇭🇰 粵語</button>
                 <button onclick="switchLanguage('ko')" class="px-2.5 py-1 font-bold rounded-xl bg-slate-700 text-white hover:bg-slate-600 transition border border-slate-600">🇰🇷 한국어</button>
                 <button onclick="switchLanguage('tr')" class="px-2.5 py-1 font-bold rounded-xl bg-slate-700 text-white hover:bg-slate-600 transition border border-slate-600">🇹🇷 Türkçe</button>
                 <button onclick="switchLanguage('tl')" class="px-2.5 py-1 font-bold rounded-xl bg-slate-700 text-white hover:bg-slate-600 transition border border-slate-600">🇵🇭 Tagalog</button>
                 <button onclick="switchLanguage('ta')" class="px-2.5 py-1 font-bold rounded-xl bg-slate-700 text-white hover:bg-slate-600 transition border border-slate-600">🇮🇳 தமிழ்</button>
             </div>
         </div>
-        <!-- Hidden Google Translate Element -->
         <div id="google_translate_element"></div>
     </header>
 
@@ -111,12 +103,11 @@
             
             <div class="flex flex-col md:flex-row items-center gap-6 bg-slate-900/80 p-6 sm:p-8 rounded-3xl border border-amber-400/30 backdrop-blur-md">
                 <div class="flex-shrink-0 text-center">
-                    <img src="https://schoolweb.tdsb.on.ca/portals/davidlewis/images/DavidLewisPS_logo.png" 
-                         onerror="this.onerror=null; this.src='https://www.tdsb.on.ca/Portals/0/Community/Mascots/Lions.png';" 
-                         alt="David Lewis Lion Mascot" 
-                         class="w-28 h-28 sm:w-36 sm:h-36 mx-auto rounded-2xl border-4 border-amber-400 bg-white p-2 shadow-xl object-contain">
+                    <div class="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full border-4 border-amber-400 bg-amber-400 flex items-center justify-center text-slate-950 font-black text-6xl shadow-xl">
+                        <i class="fa-solid fa-shield-cat"></i>
+                    </div>
                     <span class="inline-block mt-3 bg-amber-400 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider">
-                        Home of the Lewis Lions
+                        Lewis Lions
                     </span>
                 </div>
                 
@@ -128,19 +119,19 @@
                         Welcome Parents & Guardians to <br><span class="text-amber-300">Intermediate Curriculum Night</span>
                     </h2>
                     <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
-                        In the Intermediate Division at David Lewis Public School, our teaching team works collaboratively to nurture curious, capable, and confident learners. We believe every student can achieve excellence when provided with high expectations, robust support, and an environment that fosters self-advocacy, initiative, and a growth mindset.
+                        In the Intermediate Division at David Lewis Public School, our teaching team works collaboratively to build curious, capable, and resilient learners. We foster a supportive environment that emphasizes self-advocacy, initiative, responsibility, and a growth mindset.
                     </p>
                 </div>
             </div>
 
-            <!-- CORE PHILOSOPHY CARDS -->
+            <!-- PHILOSOPHY CARDS -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 space-y-2">
                     <div class="flex items-center space-x-3 text-amber-400">
                         <i class="fa-solid fa-comment-dots text-xl"></i>
                         <h3 class="font-bold text-white text-base">Self-Advocacy</h3>
                     </div>
-                    <p class="text-xs text-slate-300 leading-relaxed">We guide students to ask questions, seek clarification, and express their learning needs independently as they prepare for high school.</p>
+                    <p class="text-xs text-slate-300 leading-relaxed">Guiding students to ask questions, seek clarification, and confidently articulate their learning needs.</p>
                 </div>
 
                 <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 space-y-2">
@@ -148,7 +139,7 @@
                         <i class="fa-solid fa-brain text-xl"></i>
                         <h3 class="font-bold text-white text-base">Growth Mindset</h3>
                     </div>
-                    <p class="text-xs text-slate-300 leading-relaxed">Mistakes are treated as valuable learning opportunities. We focus on perseverance, reflection, and continuous personal progress.</p>
+                    <p class="text-xs text-slate-300 leading-relaxed">Embracing challenges as opportunities to grow. Effort, reflection, and strategy drive success.</p>
                 </div>
 
                 <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 space-y-2">
@@ -156,7 +147,7 @@
                         <i class="fa-solid fa-user-shield text-xl"></i>
                         <h3 class="font-bold text-white text-base">Responsibility & Initiative</h3>
                     </div>
-                    <p class="text-xs text-slate-300 leading-relaxed">Students are encouraged to take ownership of their organizational habits, complete tasks on time, and actively participate with pride.</p>
+                    <p class="text-xs text-slate-300 leading-relaxed">Encouraging ownership over organization, timely task completion, and active participation.</p>
                 </div>
             </div>
 
@@ -166,32 +157,32 @@
     <!-- NAVIGATION MENU BAR -->
     <nav class="bg-white border-b border-slate-200 sticky top-[68px] z-40 shadow-sm">
         <div class="max-w-5xl mx-auto flex justify-between overflow-x-auto text-xs sm:text-sm font-bold text-slate-700">
-            <a href="#routines" class="py-4 px-4 border-b-2 border-transparent hover:border-blue-600 hover:text-blue-600 transition whitespace-nowrap"><i class="fa-solid fa-clock mr-1.5 text-blue-600"></i>Routines & Expectations</a>
-            <a href="#pedagogy" class="py-4 px-4 border-b-2 border-transparent hover:border-amber-500 hover:text-amber-600 transition whitespace-nowrap"><i class="fa-solid fa-shapes mr-1.5 text-amber-500"></i>TDSB Learning Frameworks</a>
+            <a href="#routines" class="py-4 px-4 border-b-2 border-transparent hover:border-blue-600 hover:text-blue-600 transition whitespace-nowrap"><i class="fa-solid fa-clock mr-1.5 text-blue-600"></i>Routines & Digital Norms</a>
+            <a href="#pedagogy" class="py-4 px-4 border-b-2 border-transparent hover:border-amber-500 hover:text-amber-600 transition whitespace-nowrap"><i class="fa-solid fa-shapes mr-1.5 text-amber-500"></i>Learning Frameworks & UDL</a>
             <a href="#plans" class="py-4 px-4 border-b-2 border-transparent hover:border-emerald-600 hover:text-emerald-600 transition whitespace-nowrap"><i class="fa-solid fa-file-pdf mr-1.5 text-emerald-600"></i>Long Range Plans (PDF)</a>
-            <a href="#fermi" class="py-4 px-4 border-b-2 border-transparent hover:border-purple-600 hover:text-purple-600 transition whitespace-nowrap"><i class="fa-solid fa-lightbulb mr-1.5 text-purple-600"></i>SDG & Fermi Questions</a>
+            <a href="#fermi" class="py-4 px-4 border-b-2 border-transparent hover:border-purple-600 hover:text-purple-600 transition whitespace-nowrap"><i class="fa-solid fa-lightbulb mr-1.5 text-purple-600"></i>SDG & Critical Thinking</a>
         </div>
     </nav>
 
     <!-- MAIN CONTENT CONTAINER -->
     <main class="max-w-5xl mx-auto px-4 py-10 space-y-12">
 
-        <!-- SECTION 1: ROUTINES & EXPECTATIONS -->
+        <!-- SECTION 1: ROUTINES, EXPECTATIONS & DIGITAL CITIZENSHIP -->
         <section id="routines" class="space-y-6">
             <div class="border-l-8 border-blue-600 pl-4 py-1">
-                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 font-['Lexend']">School Routines & Expectations</h2>
-                <p class="text-slate-600 text-xs sm:text-sm font-semibold">Supporting smooth transitions, work completion, and student success across Grade 7 & 8.</p>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 font-['Lexend']">School Routines & Digital Citizenship</h2>
+                <p class="text-slate-600 text-xs sm:text-sm font-semibold">Supporting smooth transitions, responsibility, and safe technology use.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <!-- Locker Policy -->
+                <!-- Locker Routine -->
                 <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3">
                     <div class="flex items-center space-x-3 text-blue-700">
                         <i class="fa-solid fa-lock text-2xl"></i>
-                        <h3 class="font-bold text-slate-900 text-lg">Locker Use Routine</h3>
+                        <h3 class="font-bold text-slate-900 text-lg">Locker Access Routines</h3>
                     </div>
                     <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        Lockers are accessed specifically during morning entry, before/after recess, and at dismissal time. Keeping outerwear and backpacks in lockers ensures a safe, clutter-free classroom environment focused on instruction.
+                        Lockers are accessed during designated times: morning entry, before/after recess, and dismissal. Keeping backpacks and outerwear in lockers keeps classrooms safe, spacious, and focused on learning.
                     </p>
                 </div>
 
@@ -202,39 +193,39 @@
                         <h3 class="font-bold text-slate-900 text-lg">Prepared to Learn Daily</h3>
                     </div>
                     <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        Students are expected to arrive in class on time with basic learning supplies: writing utensils, lined paper/notebooks, geometry tools, and charged TDSB Chromebooks ready for learning activities.
+                        Students are expected to arrive in class on time with basic supplies: pens/pencils, paper, notebooks, and a fully charged TDSB Chromebook ready for instructional tasks.
                     </p>
                 </div>
 
-                <!-- Assignment Deadlines -->
-                <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3">
-                    <div class="flex items-center space-x-3 text-emerald-600">
-                        <i class="fa-solid fa-calendar-check text-2xl"></i>
-                        <h3 class="font-bold text-slate-900 text-lg">Finishing Assignments on Time</h3>
+                <!-- Digital Safety & Common Sense Guidelines -->
+                <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3 md:col-span-2">
+                    <div class="flex items-center space-x-3 text-indigo-700">
+                        <i class="fa-solid fa-laptop-code text-2xl"></i>
+                        <h3 class="font-bold text-slate-900 text-lg">Digital Citizenship & TDSB Online Safety Norms</h3>
                     </div>
                     <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        Timely submission of classwork and inquiry projects develops strong time-management skills. Students are coached on breaking down larger projects and reaching out for guidance prior to due dates.
+                        In alignment with TDSB guidelines and Common Sense Media digital principles, we teach students to maintain a safe, positive, and responsible online presence:
                     </p>
-                </div>
-
-                <!-- Learning Skills & Motto -->
-                <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3">
-                    <div class="flex items-center space-x-3 text-purple-600">
-                        <i class="fa-solid fa-award text-2xl"></i>
-                        <h3 class="font-bold text-slate-900 text-lg">Learning Skills & School Motto</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs text-slate-800 font-medium">
+                        <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+                            <strong>👣 Digital Footprint:</strong> Reminding students that online actions leave permanent records.
+                        </div>
+                        <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+                            <strong>🔒 Privacy & Safety:</strong> Keeping personal passwords, information, and data secure.
+                        </div>
+                        <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+                            <strong>⚖️ Device Balance:</strong> Encouraging healthy screen-time habits at school and home.
+                        </div>
                     </div>
-                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        We actively reinforce Ontario Learning Skills (Responsibility, Organization, Independent Work, Collaboration, Initiative, Self-Regulation) under our school motto: <strong>"Participate with Pride"</strong>.
-                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 2: TDSB PEDAGOGY & FRAMEWORKS -->
+        <!-- SECTION 2: TDSB PEDAGOGY & UNIVERSAL DESIGN FOR LEARNING -->
         <section id="pedagogy" class="space-y-6">
             <div class="border-l-8 border-amber-500 pl-4 py-1">
-                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 font-['Lexend']">Key Pedagogical Frameworks</h2>
-                <p class="text-slate-600 text-xs sm:text-sm font-semibold">How learning is structured in our TDSB intermediate classrooms.</p>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 font-['Lexend']">Pedagogy & Universal Design for Learning (UDL)</h2>
+                <p class="text-slate-600 text-xs sm:text-sm font-semibold">Ensuring learning is accessible, engaging, and meaningful for every student.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -245,177 +236,63 @@
                         <h3 class="font-bold text-slate-900 text-lg">Building Thinking Classrooms</h3>
                     </div>
                     <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        Following Dr. Peter Liljedahl's research, students collaborate on non-permanent vertical whiteboards in visibly random groups to engage in active problem solving and deep mathematical reasoning.
+                        Students collaborate in visibly random groups at vertical whiteboards to solve complex problems, share strategies, and explain their mathematical thinking.
                     </p>
                 </div>
 
-                <!-- Inquiry & 21st Century -->
+                <!-- Inquiry & 21C -->
                 <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3">
                     <div class="flex items-center space-x-3">
-                        <span class="bg-blue-100 text-blue-900 font-black text-xs px-3 py-1 rounded-lg">21C & Inquiry</span>
-                        <h3 class="font-bold text-slate-900 text-lg">Inquiry-Driven & 21st Century Skills</h3>
+                        <span class="bg-blue-100 text-blue-900 font-black text-xs px-3 py-1 rounded-lg">Inquiry</span>
+                        <h3 class="font-bold text-slate-900 text-lg">Inquiry-Driven Learning</h3>
                     </div>
                     <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        Learning starts with big questions. We foster critical thinking, digital literacy, creative problem solving, and effective communication across all disciplines.
+                        Students investigate big real-world questions, develop research skills, analyze evidence, and communicate findings across science, history, and language.
                     </p>
                 </div>
 
-                <!-- UDL & Edwin -->
+                <!-- Universal Design for Learning (UDL) -->
                 <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3 md:col-span-2">
                     <div class="flex items-center space-x-3">
-                        <span class="bg-rose-100 text-rose-900 font-black text-xs px-3 py-1 rounded-lg">UDL & Edwin</span>
-                        <h3 class="font-bold text-slate-900 text-lg">Universal Design for Learning & Edwin Math Ordering</h3>
+                        <span class="bg-emerald-100 text-emerald-900 font-black text-xs px-3 py-1 rounded-lg">UDL</span>
+                        <h3 class="font-bold text-slate-900 text-lg">Universal Design for Learning (Making Learning Accessible)</h3>
                     </div>
                     <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        Lessons are designed from the ground up to offer flexible learning pathways for every student. Math instruction follows the Edwin lesson order guide, ensuring structured concept progression with rich digital tools.
+                        Universal Design for Learning ensures every student can access the curriculum successfully. We provide multiple entry points, flexible options for demonstrating understanding (writing, oral presentations, visual models, digital tools), and supportive learning scaffolds tailored to individual student needs.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 3: LONG RANGE PLANS & CONDENSED PDF LINK -->
+        <!-- SECTION 3: LONG RANGE PLANS & EMBEDDED PDF VIEWER -->
         <section id="plans" class="space-y-6">
             <div class="border-l-8 border-emerald-600 pl-4 py-1 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                     <h2 class="text-2xl sm:text-3xl font-black text-slate-900 font-['Lexend']">Long Range Curriculum Plans</h2>
-                    <p class="text-slate-600 text-xs sm:text-sm font-semibold">Condensed overview for Grade 7 & Grade 8 subjects.</p>
+                    <p class="text-slate-600 text-xs sm:text-sm font-semibold">View or download our full Grade 7 & 8 curriculum plan.</p>
                 </div>
-                <!-- DEDICATED PDF BUTTON LINK -->
                 <div>
-                    <a href="2026-2027 Long Range Plans Intermediate.pdf" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm px-5 py-3 rounded-2xl shadow-md transition transform hover:-translate-y-0.5">
-                        <i class="fa-solid fa-file-pdf text-lg"></i> Access Full LRP PDF
+                    <a href="2026-2027 Long Range Plans Intermediate.pdf" download class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm px-5 py-3 rounded-2xl shadow-md transition transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-download text-lg"></i> Download LRP PDF
                     </a>
                 </div>
             </div>
 
-            <!-- CONDENSED CURRICULUM SUMMARY TABLES -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                
-                <!-- Science & Math -->
-                <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-4">
-                    <div class="border-b pb-2">
-                        <h3 class="font-extrabold text-slate-900 text-lg text-emerald-700 flex items-center gap-2">
-                            <i class="fa-solid fa-flask"></i> Science & Math (Edwin Guided)
-                        </h3>
-                    </div>
-                    <div class="text-xs text-slate-700 space-y-3">
-                        <div>
-                            <strong class="text-slate-900 block text-sm">Science Units:</strong>
-                            <ul class="list-disc pl-4 space-y-1 mt-1">
-                                <li><strong>Term 1:</strong> Grade 7 Heat in the Environment & Interactions in Ecosystems[cite: 10]. Grade 8 Water Systems & Cell Biology[cite: 10].</li>
-                                <li><strong>Term 2:</strong> Grade 7 Pure Substances/Mixtures & Structures[cite: 26, 27]. Grade 8 Systems in Action & Fluids[cite: 26, 27].</li>
-                            </ul>
+            <!-- EMBEDDED PDF VIEWER WITH FALLBACK -->
+            <div class="bg-white p-4 rounded-2xl border-2 border-slate-200 shadow-sm space-y-4">
+                <div class="w-full h-[500px] rounded-xl overflow-hidden border border-slate-200 bg-slate-50">
+                    <iframe src="2026-2027 Long Range Plans Intermediate.pdf" class="w-full h-full" title="David Lewis P.S. Long Range Plans">
+                        <div class="p-8 text-center space-y-4">
+                            <i class="fa-solid fa-file-pdf text-5xl text-emerald-600"></i>
+                            <p class="text-sm text-slate-700 font-semibold">Your browser does not support embedded PDF preview.</p>
+                            <a href="2026-2027 Long Range Plans Intermediate.pdf" target="_blank" class="inline-block bg-emerald-600 text-white px-4 py-2 rounded-xl text-xs font-bold">Open PDF in New Tab</a>
                         </div>
-                        <div>
-                            <strong class="text-slate-900 block text-sm">Math Strands:</strong>
-                            <p class="mt-1">Number Sense (Fractions, Decimals, Percents), Data Management, Patterns & Equations, Geometry, Measurement (Circles, Area, Volume), Financial Literacy, and Probability[cite: 10, 11, 12, 13, 27, 28].</p>
-                        </div>
-                    </div>
+                    </iframe>
                 </div>
-
-                <!-- Language & Social Studies -->
-                <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-4">
-                    <div class="border-b pb-2">
-                        <h3 class="font-extrabold text-slate-900 text-lg text-blue-700 flex items-center gap-2">
-                            <i class="fa-solid fa-book"></i> Language & Social Studies
-                        </h3>
-                    </div>
-                    <div class="text-xs text-slate-700 space-y-3">
-                        <div>
-                            <strong class="text-slate-900 block text-sm">Language Arts:</strong>
-                            <ul class="list-disc pl-4 space-y-1 mt-1">
-                                <li><strong>Term 1:</strong> Paragraph Composition, Short Stories, Satire, Reading Comprehension ('RACE' strategy), and Speeches[cite: 2, 3].</li>
-                                <li><strong>Term 2:</strong> Persuasive Writing, Expository Essays, Novel Study, and Public Service Announcements[cite: 20, 21, 23].</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <strong class="text-slate-900 block text-sm">Social Studies (History & Geography):</strong>
-                            <ul class="list-disc pl-4 space-y-1 mt-1">
-                                <li><strong>Geography (Term 1):</strong> Physical Geography, Natural Resources, Mapping, and Global Fair Inquiry[cite: 8].</li>
-                                <li><strong>History (Term 2):</strong> Grade 7 New France & British North America (1713–1850)[cite: 25]. Grade 8 Confederation & Changing Society (1850–1914)[cite: 25, 26].</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Arts & Phys Ed Overview -->
-                <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-4 md:col-span-2">
-                    <div class="border-b pb-2">
-                        <h3 class="font-extrabold text-slate-900 text-lg text-purple-700 flex items-center gap-2">
-                            <i class="fa-solid fa-palette"></i> Arts, Physical Education & Health Overview
-                        </h3>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-700">
-                        <div>
-                            <strong class="text-slate-900 block text-sm">The Arts:</strong>
-                            <p class="mt-1">Visual Arts (Monochromatic Portraits, 2-Point Perspective), Drama (Improv, Tableaux, Skits), Music (Elements & Connections), and Dance (Choreography & Emotion)[cite: 15, 16, 31, 32].</p>
-                        </div>
-                        <div>
-                            <strong class="text-slate-900 block text-sm">Phys Ed & Health:</strong>
-                            <p class="mt-1">Active Living, Cooperative Games, Sports Skills (Volleyball, Basketball, Badminton), Healthy Eating, Personal/Online Safety, and Mental Health Literacy[cite: 17, 18, 32, 33].</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
-        <!-- SECTION 4: SDG & FERMI QUESTIONS FOR HOME -->
+        <!-- SECTION 4: SDG & FERMI CRITICAL THINKING PROMPTS -->
         <section id="fermi" class="space-y-6">
             <div class="border-l-8 border-purple-600 pl-4 py-1">
-                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 font-['Lexend']">SDG & Fermi Thinking Prompts</h2>
-                <p class="text-slate-600 text-xs sm:text-sm font-semibold">Questions to spark meaningful learning conversations with your child at home.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <!-- SDG Questions -->
-                <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3">
-                    <div class="flex items-center space-x-3 text-emerald-700">
-                        <i class="fa-solid fa-globe text-2xl"></i>
-                        <h3 class="font-bold text-slate-900 text-lg">Sustainable Development Goals (SDGs)</h3>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        As students explore <strong>Water Systems</strong> (Grade 8) and <strong>Heat in the Environment</strong> (Grade 7), ask them[cite: 10]:
-                    </p>
-                    <ul class="bg-emerald-50 p-4 rounded-xl text-xs sm:text-sm text-emerald-950 space-y-2 border border-emerald-200 font-medium">
-                        <li>🌊 <em>"How does clean water access impact communities in Ontario and around the world?"</em> (SDG 6: Clean Water)</li>
-                        <li>🔥 <em>"In what ways can we minimize thermal energy loss in our home during winter?"</em> (SDG 7 & 13: Clean Energy / Climate Action)</li>
-                    </ul>
-                </div>
-
-                <!-- Fermi Math Questions -->
-                <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm space-y-3">
-                    <div class="flex items-center space-x-3 text-purple-700">
-                        <i class="fa-solid fa-calculator text-2xl"></i>
-                        <h3 class="font-bold text-slate-900 text-lg">Fermi Problem-Solving Questions</h3>
-                    </div>
-                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        Fermi problems ask students to estimate complex numbers using reasoning and logical assumptions:
-                    </p>
-                    <ul class="bg-purple-50 p-4 rounded-xl text-xs sm:text-sm text-purple-950 space-y-2 border border-purple-200 font-medium">
-                        <li>💡 <em>"How many liters of water are used by all students at David Lewis P.S. during a single school year?"</em></li>
-                        <li>💡 <em>"If all the math whiteboards in the intermediate hallway were laid end-to-end, how far down Fundy Bay Blvd would they reach?"</em></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-white py-10 border-t-4 border-amber-400 text-xs">
-        <div class="max-w-5xl mx-auto px-4 text-center space-y-3">
-            <div class="flex justify-center items-center space-x-2">
-                <img src="https://schoolweb.tdsb.on.ca/portals/davidlewis/images/DavidLewisPS_logo.png" 
-                     onerror="this.onerror=null; this.src='https://www.tdsb.on.ca/Portals/0/Community/Mascots/Lions.png';" 
-                     alt="David Lewis Lion Mascot" 
-                     class="w-8 h-8 rounded-full border border-amber-400 bg-white p-0.5 object-contain">
-                <p class="font-bold text-amber-300 text-sm">David Lewis Public School • TDSB</p>
-            </div>
-            <p class="text-slate-300">130 Fundy Bay Blvd, Scarborough, ON M1W 3G1 • (416) 396-5810</p>
-            <p class="text-slate-400">Intermediate Division Team • <em>"Participate with Pride"</em></p>
-        </div>
-    </footer>
-
-</body>
-</html>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate
